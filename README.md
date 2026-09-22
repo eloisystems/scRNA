@@ -278,7 +278,3 @@ Every pipeline run produces:
 | **MAD** | Median Absolute Deviation — a robust spread measure used for adaptive QC thresholds. |
 | **Doublet** | Two cells captured in the same droplet; produces a hybrid barcode that must be identified and removed before analysis. |
 
----
-
-*CellAudit v1.0 — September 2026*  
-*The first scRNA-seq pipeline to combine three selectable mathematical backends, automated SHAP-based explainability, YAML-driven reproducibility, and a self-hostable browser interface.*
