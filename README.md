@@ -1,5 +1,4 @@
-# CellAudit
-
+scRNA
 **A Single-Cell RNA Sequencing Analysis Engine**  
 *From raw sequencing reads to explainable, interactive single-cell insights*
 
@@ -7,7 +6,7 @@
 
 ## Overview
 
-CellAudit is a config-driven, reproducible scRNA-seq analysis engine that takes a cell count matrix as input and produces fully annotated, interactively visualised, and mathematically explained cluster outputs — without any manual scripting by the user.
+This scRNA system is a config-driven, reproducible scRNA-seq analysis engine that takes a cell count matrix as input and produces fully annotated, interactively visualised, and mathematically explained cluster outputs — without any manual scripting by the user.
 
 Its defining features are:
 
@@ -40,9 +39,9 @@ A typical count matrix is **5,000–20,000 cells × 20,000–33,000 genes**, wit
 | **Cell Ranger (10x)** | Handles FASTQ → count matrix only; proprietary and hardware-specific. |
 | **Galaxy / Orange3** | Browser-based but slow, generic, poor scalability beyond small datasets. |
 
-### Specific Gaps CellAudit Addresses
+### Specific Gaps the System Addresses
 
-| Gap | CellAudit's Solution |
+| Gap | System Solution |
 |---|---|
 | No selectable math backend | Three backends (linear, kernel, NN) behind a single API. |
 | No built-in explainability | XGBoost + SHAP attribution per cluster. |
@@ -52,7 +51,7 @@ A typical count matrix is **5,000–20,000 cells × 20,000–33,000 genes**, wit
 
 ---
 
-## The CellAudit Pipeline
+## The Pipeline
 
 ```
 INPUT
@@ -93,7 +92,7 @@ Automated via **CellTypist** (logistic regression trained on Human Cell Atlas), 
 
 ## Three Mathematical Backends
 
-This is CellAudit's defining differentiator. All three backends feed into the same downstream stages (graph → cluster → annotate → explain). Switching backend requires changing one line in the YAML config.
+This is the defining differentiator. All three backends feed into the same downstream stages (graph → cluster → annotate → explain). Switching backend requires changing one line in the YAML config.
 
 ### Backend A — Linear (PCA)
 Uses Principal Component Analysis to project each cell's 3,000-gene HVG profile into 50 principal components. Fast, reproducible, directly comparable to published Scanpy/Seurat results. **Best for:** clean, well-separated datasets; when reproducibility and literature comparability matter most.
@@ -126,7 +125,7 @@ Standard pipelines stop at cluster labels and marker gene tables. CellAudit adds
 
 ## System Architecture
 
-CellAudit uses a standard client-server architecture.
+It uses a standard client-server architecture.
 
 ```
 Browser (Streamlit MVP / Next.js)
