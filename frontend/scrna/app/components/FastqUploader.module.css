@@ -1,0 +1,360 @@
+.card {
+  padding: 38px;
+
+  background:
+    rgba(255, 255, 255, 0.90);
+
+  border:
+    1px solid
+    rgba(34, 91, 78, 0.12);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(25, 72, 61, 0.10);
+
+  backdrop-filter: blur(14px);
+}
+
+/* --------------------------------
+   Card Header
+-------------------------------- */
+
+.cardHeader {
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #159b87;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.cardHeader h2 {
+  margin: 0;
+
+  color: #183f36;
+
+  font-size: 26px;
+
+  font-weight: 600;
+
+  letter-spacing: -0.025em;
+}
+
+.cardHeader p {
+  margin: 9px 0 0;
+
+  color: #718b84;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+/* --------------------------------
+   Dropzone
+-------------------------------- */
+
+.dropzone {
+  display: block;
+
+  padding: 48px 25px;
+
+  text-align: center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fafdfc,
+      #f2f9f6
+    );
+
+  border:
+    1.5px dashed
+    #9bc8bd;
+
+  border-radius: 18px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.dropzone:hover {
+  border-color: #159b87;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f7fcfa,
+      #ebf7f3
+    );
+
+  transform: translateY(-1px);
+}
+
+.dropzoneDisabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+.uploadIcon {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 16px;
+
+  border-radius: 12px;
+
+  background: #e3f3ee;
+
+  color: #159b87;
+
+  font-size: 23px;
+  font-weight: 300;
+}
+
+.dropzoneTitle {
+  color: #23574b;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.dropzoneHint {
+  margin-top: 8px;
+
+  color: #8aa29c;
+
+  font-size: 12px;
+}
+
+.fileInput {
+  display: none;
+}
+
+/* --------------------------------
+   Selected File
+-------------------------------- */
+
+.fileCard {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  margin-top: 18px;
+
+  padding: 16px;
+
+  background: #f1f9f6;
+
+  border:
+    1px solid
+    #cce6de;
+
+  border-radius: 16px;
+}
+
+.fileIcon {
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border-radius: 11px;
+
+  background: #dcefe9;
+
+  color: #247566;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.05em;
+}
+
+.fileInfo {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.fileLabel {
+  margin-bottom: 4px;
+
+  color: #8aa29c;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+}
+
+.fileName {
+  overflow: hidden;
+
+  color: #214f44;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-overflow: ellipsis;
+
+  white-space: nowrap;
+}
+
+.fileSize {
+  margin-top: 4px;
+
+  color: #79938c;
+
+  font-size: 12px;
+}
+
+/* --------------------------------
+   Submit Button
+-------------------------------- */
+
+.submitButton {
+  flex-shrink: 0;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 11px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #0f766e,
+      #159b87
+    );
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 650;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 6px 16px
+    rgba(15, 118, 110, 0.20);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 9px 20px
+    rgba(15, 118, 110, 0.26);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+}
+
+/* --------------------------------
+   Status
+-------------------------------- */
+
+.status {
+  margin-top: 18px;
+
+  padding: 13px 15px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+}
+
+.statusSuccess {
+  background: #edf8f4;
+
+  color: #286b5c;
+
+  border:
+    1px solid
+    #cce7df;
+}
+
+.statusError {
+  background: #fff5f3;
+
+  color: #a54a3f;
+
+  border:
+    1px solid
+    #f0d5d0;
+}
+
+/* --------------------------------
+   Mobile
+-------------------------------- */
+
+@media (max-width: 600px) {
+  .card {
+    padding: 24px 18px;
+
+    border-radius: 18px;
+  }
+
+  .dropzone {
+    padding: 36px 18px;
+  }
+
+  .fileCard {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .fileInfo {
+    width: calc(100% - 64px);
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}
