@@ -21,15 +21,14 @@ export default function FastqUploader() {
 
     const name = selectedFile.name.toLowerCase();
 
-    const isFastq =
-      name.endsWith(".fastq") ||
-      name.endsWith(".fq") ||
-      name.endsWith(".fastq.gz") ||
-      name.endsWith(".fq.gz");
+    const isCellMatrix =
+      name.endsWith(".h5ad") ||
+      name.endsWith(".loom") ||
+      name.endsWith(".csv");
 
-    if (!isFastq) {
+    if (!isCellMatrix) {
       setFile(null);
-      setStatus("Please select a FASTQ file.");
+      setStatus("Please select a cell matrix file.");
       return;
     }
 
@@ -105,11 +104,11 @@ export default function FastqUploader() {
         </span>
 
         <h2>
-          Upload your FASTQ file
+          Upload your cell matrix
         </h2>
 
         <p>
-          Select your RNA sequencing data to
+          Select your single-cell count matrix to
           begin the analysis.
         </p>
       </div>
@@ -126,16 +125,16 @@ export default function FastqUploader() {
         </div>
 
         <div className={styles.dropzoneTitle}>
-          Choose your FASTQ file
+          Choose your cell matrix
         </div>
 
         <div className={styles.dropzoneHint}>
-          FASTQ, FQ, FASTQ.GZ or FQ.GZ
+          H5AD, LOOM or CSV
         </div>
 
         <input
           type="file"
-          accept=".fastq,.fq,.fastq.gz,.fq.gz"
+          accept=".h5ad,.loom,.csv"
           onChange={handleFileChange}
           disabled={uploading}
           className={styles.fileInput}
@@ -146,7 +145,7 @@ export default function FastqUploader() {
         <div className={styles.fileCard}>
 
           <div className={styles.fileIcon}>
-            FASTQ
+            MATRIX
           </div>
 
           <div className={styles.fileInfo}>
